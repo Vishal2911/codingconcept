@@ -13,7 +13,6 @@ type Student struct{
 	StudentAddress Address
 
 }
-
 type Address struct{
 	Lane1 string
 	Lane2 string
@@ -21,29 +20,6 @@ type Address struct{
 	Dist string
 	Village string
 }
-type Phone struct {
-	BasicInfo
-	IMEI string
-	Config
-}
-type Laptop struct{
-	BasicInfo
-	SerialNo string
-	Configuration Config
-}
-type BasicInfo struct {
-	Brand string
-	Model string
-}
-type Config struct {
-	RAM int
-	ROM int
-	Processor string
-	OS string
-} 
-
-
-
 func main() {
 	// Primitive approch
 	// var name_vishal string
@@ -74,6 +50,14 @@ func main() {
 
 	val := 122
 	val2 := "12212"
+
+	var vishaladdress *Student
+	vishaladdress = &vishal
+	// temp := vishal
+
+	shivamAddress := &shivam
+
+	fmt.Println("vishal pointer address = ",*vishaladdress,  "shivam pointer address = " , shivamAddress)
 
 	var interfaceExample interface{}
 
